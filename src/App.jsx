@@ -1,8 +1,5 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./routes/homePage/homePage";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
 import ListPage from "./routes/listPage/listPage";
 import Layout from "./routes/layout/layout";
 import SinglePage from "./routes/singlePage/singlePage";
@@ -12,46 +9,20 @@ import Register from "./routes/register/register";
 import NewPostPage from "./routes/newPostPage/newPostPage";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Layout />,
-      children:[
-        {
-          path:"/",
-          element:<HomePage/>
-        },
-        {
-          path:"/list",
-          element:<ListPage/>
-        },
-        {
-          path:"/:id",
-          element:<SinglePage/>
-        },
-        {
-          path:"/profile",
-          element:<ProfilePage/>
-        },
-        {
-          path:"/login",
-          element:<Login/>
-        },
-        {
-          path:"/register",
-          element:<Register/>
-        },
-        {
-          path:"/new-post",
-          element:<NewPostPage/>
-        }
-      ]
-    }
-  ]);
-
   return (
-
-    <RouterProvider router={router}/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="list" element={<ListPage />} />
+          <Route path=":id" element={<SinglePage />} />
+          <Route path="profile" element={<ProfilePage />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="new-post" element={<NewPostPage />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
