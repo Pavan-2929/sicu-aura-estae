@@ -14,12 +14,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="/list" element={<ListPage />} />
-          <Route path="/:id" element={<SinglePage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/new-post" element={<NewPostPage />} />
+          <Route path="list" element={<ListPage />} />
+          <Route path=":id" element={<SinglePage />} />
+          <Route path="profile" element={<ProfilePage />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="new-post" element={<NewPostPage />} />
         </Route>
       </Routes>
     </Router>
