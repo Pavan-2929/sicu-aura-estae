@@ -22,7 +22,7 @@ function App() {
           element:<HomePage/>
         },
         {
-          path:"list",
+          path:"/list",
           element:<ListPage/>
         },
         {
@@ -30,7 +30,7 @@ function App() {
           element:<SinglePage/>
         },
         {
-          path:"profile",
+          path:"/profile",
           element:<ProfilePage/>
         },
         {
@@ -42,7 +42,7 @@ function App() {
           element:<Register/>
         },
         {
-          path:"new-post",
+          path:"/new-post",
           element:<NewPostPage/>
         }
       ]
