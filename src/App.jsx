@@ -21,6 +21,7 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="new-post" element={<NewPostPage />} />
         </Route>
+        <Route path="/list" element={<ListPage />} />
       </Routes>
     </Router>
   );
